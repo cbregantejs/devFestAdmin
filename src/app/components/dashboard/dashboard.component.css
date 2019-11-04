@@ -1,0 +1,24 @@
+.container_body{
+    width: 100%;
+    padding: 15px;
+    margin-left: auto;
+    height: calc(100% - 64px);
+    overflow: auto;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.container_body.expanded{
+    width: calc(100% - 240px);
+}
+
+
+@media only screen and (max-width: 992px){
+    .container_body{
+        height: calc(100% - 45px);
+    }
+    .container_body.expanded{
+        width: 100%;
+    }
+}

@@ -1,0 +1,72 @@
+.cont_login {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-image: url('/assets/img/backgrounds/bg_login.jpg');
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    font-family: 'Raleway', sans-serif;
+
+}
+.column_login{
+    width: 500px;
+    height: 100%;
+    display: flex;
+    margin-left: auto;
+    position: relative;
+    background: var(--color-1);
+    -webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    -moz-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.login_form{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+
+}
+.login_form img{
+    margin-bottom: 25px;
+    width: 90%;
+}
+.login_form h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-1);
+    text-align: center;
+}
+.login_form button {
+    background: white;
+    border: 0px;
+    padding: 10px;
+    width: 100%;
+    color: #131a20;
+    outline: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.login_form button:disabled {
+    cursor: not-allowed;
+    background: var(--color-7);
+    border-color: var(--color-7);
+}
+.input_group input{
+    border: 1px solid white;
+}
+
+@media only screen and (max-width: 650px){
+    .column_login{
+        width: 100%;
+        background: rgba(12, 12, 12,0.8);
+    }
+}
+@media only screen and (max-width: 480px){
+    .login_form{
+        width: 100%;
+    }
+}

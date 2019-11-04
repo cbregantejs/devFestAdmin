@@ -1,0 +1,5 @@
+<app-navigation (expandedEvent)="changeExpanded($event)" [statusExpanded]="expanded"></app-navigation>
+<div class="container_body" [ngClass]="expanded ? 'expanded' : ''">
+    <router-outlet></router-outlet>
+</div>
+

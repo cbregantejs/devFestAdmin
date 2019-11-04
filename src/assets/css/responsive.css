@@ -1,0 +1,5 @@
+@media only screen and (max-width: 992px){
+	.cont_speakers{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

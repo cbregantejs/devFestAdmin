@@ -1,0 +1,42 @@
+<div class="cont_login">
+    <div class="column_login">
+        <div class="loading_box" *ngIf="loading == true">
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+        <div class="login_form">
+            <img [src]="'assets/img/logo.svg'" alt="Logo">
+            <!--<h2>INGRESAR</h2>-->
+            <form ngNativeValidate #f="ngForm" name="login_form" (ngSubmit)="toLogin( f )">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="input_group">
+                            <!--<label>Usuario</label>-->
+                            <input ngModel type="email" placeholder="Email" name="email" required>
+                            <span class="icon">
+                            <i class="fas fa-user-alt"></i>
+                        </span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input_group">
+                            <!--<label>Contraseña</label>-->
+                            <input ngModel type="password" placeholder="Contraseña" name="password" required>
+                            <span class="icon">
+                            <i class="fas fa-unlock-alt"></i>
+                        </span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit">
+                            INGRESAR
+                        </button>
+                    </div>
+                    <div class="col-12">
+                        <br>
+                        <span class="error_span" *ngIf="error_login == true">Credenciales invalidas.</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

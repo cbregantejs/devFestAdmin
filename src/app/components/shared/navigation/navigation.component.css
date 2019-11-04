@@ -1,0 +1,149 @@
+.topbar{
+    background: var(--color-1);
+    color: #fff;
+    display: flex;
+    padding: 0 15px;
+    height: 64px;
+    width: 100%;
+    align-items: center;
+    white-space: nowrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    box-shadow: 1px 0 10px rgba(0,0,0,.5);
+}
+.topbar .logo{
+    width: 225px;
+    height: 100%;
+    display: flex;
+}
+.topbar .logo img{
+    width: 120px;
+    margin: auto 0px;
+}
+.topbar button{
+    border: 0px;
+    background: transparent;
+    color: white;
+    font-size: 21px;
+    margin: auto 0px;
+    cursor: pointer;
+    outline: 0;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.topbar button:hover{
+    color: var(--color-2);
+}
+.topbar .btn-burger{
+    margin-right: auto;
+    cursor: pointer;
+}
+.topbar .btn-burger.active{
+    color: var(--color-2);
+}
+.topbar .btn-cog{
+
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.sidebar{
+    width: 240px;
+    display: block;
+    position: absolute;
+    top: 64px;
+    background: white;
+    bottom: 0;
+    outline: 0;
+    z-index: 10;
+    box-sizing: border-box;
+    overflow-y: auto;
+    transform: none;
+    box-shadow: 1px 0 20px rgba(0,0,0,.08);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.sidebar.active{
+    transform: translate3d(-100%,0,0);
+}
+.sidebar .user_info{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: .9rem;
+    padding: 0.6rem;
+    margin: 15px;
+    transition: background-color .3s;
+    background-color: rgba(0,0,0,.08);
+}
+.sidebar .user_info:hover{
+    background-color: rgba(0,0,0,.1);
+}
+.sidebar .user_info img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.sidebar .user_info .text{
+    font-size: 12px;
+}
+.sidebar .user_info .text ._name{
+    color: #333;
+    font-weight: 500;
+}
+.sidebar .user_info .text ._email{
+    color: #828181;
+    margin-top: .1rem;
+    line-height: 100%;
+}
+.sidebar .list_menu{
+    margin: 0px;
+    padding: 0px;
+}
+.sidebar .list_menu .list__item{
+    list-style: none;
+    padding: 0 15px;
+}
+.sidebar .list_menu .list__item a{
+    height: 45px;
+    padding: 0 10px;
+    align-items: center;
+    display: flex;
+    font-size: 15px;
+    white-space: nowrap;
+    color: #8f999e;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.sidebar .list_menu .list__item a:hover{
+    color: var(--color-3);
+}
+.sidebar .list_menu .list__item a i{
+    margin-right: 5px;
+}
+
+
+
+
+@media only screen and (max-width: 992px){
+    .topbar .logo{
+        display: none;
+    }
+    .topbar{
+        height: 45px;
+    }
+
+    .sidebar{
+        position: fixed;
+        top: 45px;
+    }
+
+}

@@ -1,0 +1,31 @@
+<div class="_card">
+  <div class="_title">
+    <h2>Speakers</h2>
+  </div>
+  <div class="cont_speakers">
+      <div class="row">
+        <div class="col-xl-3 col-md-4 col-sm-6 col-12" *ngFor="let item of speakers">
+          <div class="card_speaker">
+              <div class="_actions">
+                <span (click)="deleteSpeaker(item)">
+                  <i class="fas fa-trash-alt"></i>
+                </span>
+                <span>
+                  <i class="fas fa-pen"></i>
+                </span>
+              </div>
+              <div class="_photo">
+                <img src="{{item.payload.doc.data().photoUrl}}">
+              </div>
+              <div class="_names">
+                <span>{{item.payload.doc.data().name}}</span>
+                <p>{{item.payload.doc.data().title}}</p>
+              </div>
+              <div class="_short_bio">
+                {{item.payload.doc.data().shortBio}}
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
