@@ -1,6 +1,11 @@
 <div class="_card">
   <div class="_title">
     <h2>Speakers</h2>
+    <div class="_actions">
+      <button type="button" (click)="openModalLat(1, '800px')">
+        <i class="fas fa-user-plus"></i>
+      </button>
+    </div>
   </div>
   <div class="cont_speakers">
       <div class="row">
@@ -27,5 +32,24 @@
           </div>
         </div>
       </div>
+  </div>
+</div>
+
+<div class="modal_lateral"  [ngClass]="{'_active': current_modal.open == true}">
+  <div class="_header">
+    <div class="_close">
+      <span (click)="closeModalLat()">
+          <i class="fas fa-times"></i>
+      </span>
+    </div>
+    <h2>{{current_modal.title}}</h2>
+    <div class="_actions">
+      <button type="button">
+        <i class="far fa-save"></i>
+      </button>
+    </div>
+  </div>
+  <div class="_body">
+
   </div>
 </div>

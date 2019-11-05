@@ -14,11 +14,16 @@ import Swal from 'sweetalert2';
 export class SpeakersComponent implements OnInit {
   // speakers = [];
   speakers;
+  current_modal = {
+    title: '',
+    _id: 0,
+    open: false
+  };
 
   constructor(
       private _speakerService: SpeakerService
   ) {
-
+    // this.current_modal.open = false;
   }
 
   ngOnInit() {
@@ -63,6 +68,28 @@ export class SpeakersComponent implements OnInit {
         // )
       }
     });
+  }
+
+  openModalLat (opt, width, obj) {
+    if (opt === 1) {
+      this.current_modal = {
+        title: 'Nuevo Speaker',
+        _id: opt,
+        open: true
+      };
+
+    } else {
+
+    }
+    (<HTMLElement>document.getElementsByClassName('modal_lateral')[0]).style.width = width;
+  }
+
+  closeModalLat () {
+    this.current_modal = {
+      title: '',
+      _id: 0,
+      open: false
+    };
   }
 
 }

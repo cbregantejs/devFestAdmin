@@ -226,11 +226,26 @@ body {
 ._card ._title{
     border-bottom: 2px solid var(--color-2);
     padding-bottom: 5px;
+    display: flex;
 }
 ._card ._title h2{
     margin: 0;
     font-size: 21px;
     color: var(--color-2);
+}
+._card ._title ._actions{
+    margin-left: auto;
+    display: flex;
+}
+._card ._title ._actions button{
+    color: white;
+    background: var(--color-2);
+    border: 0px;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: 0;
 }
 .cont_speakers{
     margin-top: 15px;
@@ -291,4 +306,62 @@ body {
     color: var(--color-4);
     padding-top: 5px;
     border-top: 1px solid var(--color-4);
+}
+.modal_lateral{
+    width: 300px;
+    top: 64px;
+    background: white;
+    position: fixed;
+    z-index: 2000;
+    right: -100%;
+    bottom: 0px;
+    -webkit-box-shadow: -6px 0 12px -6px #333;
+    -moz-box-shadow: -6px 0 12px -6px #333;
+    box-shadow: -6px 0 12px -6px #333;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+.modal_lateral._active{
+    right: 0px;   
+}
+.modal_lateral ._header{
+    display: flex;
+    height: 60px;
+    border-bottom: 2px solid var(--color-2);
+}
+.modal_lateral ._header ._close{
+    margin: auto 10px auto 15px;
+    font-size: 21px;
+    color: var(--color-2);
+    cursor: pointer;
+}
+.modal_lateral ._header ._close span{
+
+}
+.modal_lateral ._header h2{
+    margin: auto 0px;
+    font-size: 18px;
+    color: var(--color-2);
+}
+.modal_lateral ._header ._actions{
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-right: 15px;
+}
+.modal_lateral ._header ._actions button{
+    color: white;
+    background: var(--color-2);
+    border: 0px;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: 0;
+    font-size: 20px;
+}
+.modal_lateral ._body{
+    padding: 15px;
 }
